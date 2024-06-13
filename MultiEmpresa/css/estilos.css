@@ -1,0 +1,598 @@
+/* Añadir esto al inicio de tu archivo CSS para resetear el estilo del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general para el cuerpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5dc; /* Fondo beige */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* La altura mínima del body será 100% de la ventana del navegador */
+}
+
+/* Contenedor principal */
+main {
+    flex: 1; /* Esto permitirá que este contenedor se expanda para llenar el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Pie de página */
+footer {
+    background: #8b4513; /* Marrón */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Esto asegura que el pie de página esté siempre en la parte inferior */
+}
+
+/* Otros estilos */
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #8b4513; /* Marrón */
+}
+
+a {
+    text-decoration: none;
+    color: #8b4513;
+}
+
+a:hover {
+    color: #a0522d;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #8b4513; /* Marrón */
+    color: #fff; /* Color blanco para los textos por defecto */
+    padding: 10px 0;
+    border-bottom: #a0522d 3px solid; /* Marrón oscuro */
+    display: flex;
+    justify-content: space-between; /* Distribuye el contenido entre los extremos */
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px; /* Ajuste para mover los enlaces más hacia la izquierda */
+    margin-right: 20px;
+}
+
+header nav a {
+    color: #fff; /* Color blanco para los enlaces */
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    color: #ffd700; /* Color dorado al pasar el ratón */
+}
+
+header .empresa {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffd700; /* Dorado solo para el nombre de la empresa */
+    margin-left: 20px;
+}
+
+#showcase {
+    min-height: 400px;
+    background: url('img/showcase.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: #fff;
+}
+
+#showcase h1 {
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#showcase p {
+    font-size: 20px;
+}
+
+#boxes {
+    margin-top: 20px;
+}
+
+#boxes .box {
+    float: left;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+}
+
+#boxes .box img {
+    width: 90px;
+}
+
+.form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 40px auto;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #8b4513; /* Marrón */
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-container button {
+    background: #8b4513; /* Marrón */
+    color: #fff;
+    border: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px; /* Botones redondeados */
+}
+
+.form-container button:hover {
+    background: #a0522d; /* Marrón oscuro */
+}
+
+.panel {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    width: 100%;
+}
+
+.panel h2 {
+    margin-bottom: 20px;
+}
+
+.panel .task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.panel .task-list li {
+    background: #f5f5dc; /* Fondo beige claro */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel .task-list li .task-name {
+    font-weight: bold;
+}
+
+.panel .task-list li .task-status {
+    font-style: italic;
+}
+
+.panel .task-list li .task-actions a {
+    margin-left: 10px;
+    color: #fff; /* Texto blanco para los botones de acciones */
+    background-color: #8b4513;
+    border: 1px solid #8b4513;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.panel .task-list li .task-actions a:hover {
+    background-color: #a0522d; /* Marrón oscuro al pasar el ratón */
+    color: #fff; /* Asegurarse de que el texto sigue siendo blanco */
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1.0em;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table-container th, .table-container td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd; /* Asegurar que cada celda tenga un borde */
+}
+
+.table-container th {
+    background-color: #8b4513;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.table-container tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.table-container tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.table-container tr:last-of-type {
+    border-bottom: 2px solid #8b4513;
+}
+
+.table-container a {
+    color: #fff; /* Texto blanco para los botones de acciones */
+    background-color: #8b4513;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #8b4513;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 2px;
+}
+
+.table-container a:hover {
+    background-color: #a0522d; /* Marrón oscuro al pasar el ratón */
+    color: #fff; /* Asegurarse de que el texto sigue siendo blanco */
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #8b4513;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #a0522d;
+}
+
+/* Botones habilitados */
+.btn {
+    background-color: #8b451300;
+    color: #fff;
+    border: 1px solid #8b4513;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px;
+}
+
+.btn:hover {
+    background-color: #a0522d;
+    color: #fff;
+}
+
+/* Botones deshabilitados */
+.btn-disabled {
+    background-color: #89898900;
+    color: #ddd;
+    border: 1px solid #838383;
+    padding: 5px 10px;  /* Asegurar el mismo padding */
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: not-allowed;
+    margin: 2px;  /* Asegurar el mismo margin */
+}
+
+.btn-create {
+    background-color: #8b4513;
+    color: #fff;
+    border: 1px solid #8b4513;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+.btn-create:hover {
+    background-color: #a0522d;
+    color: #fff;
+}
+
+/* Estilo para la pestaña de notificaciones con notificaciones no leídas */
+.notificaciones-unread {
+    color: #ff99cc; /* Rosa claro para notificaciones no leídas */
+}
+
+.notificaciones {
+    margin-top: 20px;
+}
+
+/* Estilo para los recuadros de notificaciones */
+.notificacion {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.notificacion h4 {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: #8b4513; /* Marrón */
+}
+
+.notificacion p {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.notificacion .fecha {
+    font-size: 0.9em;
+    color: #999;
+}
+
+.tabla-proyectos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla-proyectos th, .tabla-proyectos td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.tabla-proyectos th {
+    background-color: #8b4513;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.mensaje-finalizado {
+    color: grey;
+    text-align: center;
+}
+
+.mensaje-urgente {
+    color: rgb(255, 0, 0);
+    text-align: center;
+}
+
+.mensaje-espera-revision {
+    color: orange;
+    text-align: center;
+}
+
+.mensaje-completado {
+    color: green;
+    text-align: center;
+}
+
+.form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #8b4513;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.form-container input[type="url"],
+.form-container textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-container button {
+    background: #8b4513;
+    color: #fff;
+    border: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form-container button:hover {
+    background: #a0522d;
+}
+
+.form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #8b4513;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-container button {
+    background: #8b4513;
+    color: #fff;
+    border: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form-container button:hover {
+    background: #a0522d;
+}
+
+/* Menús desplegables */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+select:focus {
+    border-color: #8b4513;
+    outline: none;
+}
+
+/* Botón de filtrar */
+form button[type="submit"] {
+    background-color: #8b4513;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #a0522d;
+}
+
+/* Acciones de tabla */
+.table-container .btn {
+    color: #fff;
+    background-color: #8b4513;
+    border: 1px solid #8b4513;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.table-container .btn:hover {
+    background-color: #a0522d;
+    color: #fff;
+}
+
+/* Estilos para asegurar que el formulario y sus elementos se muestren correctamente */
+.form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 40px auto;
+    text-align: center;
+    position: relative; /* Asegurar que no esté cubierto por otros elementos */
+    z-index: 10; /* Colocar un z-index alto para que se muestre por encima de otros elementos */
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #8b4513;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: block; /* Asegurar que los inputs sean bloques y no se colapsen */
+}
+
+.form-container button {
+    background: #8b4513;
+    color: #fff;
+    border: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form-container button:hover {
+    background: #a0522d;
+}
